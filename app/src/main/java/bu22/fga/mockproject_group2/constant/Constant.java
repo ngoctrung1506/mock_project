@@ -21,7 +21,4 @@ public class Constant {
 
   public static final int TYPE_TIME_TABLE = 1;
   public static final int TYPE_LIST_LESSON = 2;
-
-  public static final int TYPE_FROM = 1;
-  public static final int TYPE_TO = 2;
 }

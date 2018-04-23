@@ -48,6 +48,6 @@ public class OnDragFromListLessonToTimeTableListener implements View.OnDragListe
   }
 
   private void onDrop(View view, int curentDrop) {
-//    new ConfirmDialog(mController.getView(), mController, curentDrop, mOnSendDataBackToMain).show();
+    new ConfirmDialog(mController.getView(), mController, curentDrop).show();
   }
 }

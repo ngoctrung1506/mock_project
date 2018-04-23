@@ -38,7 +38,5 @@ public class SaveDataState extends BaseState {
     mDatabaseHelper.updateLesson(new Lesson(newName), (int) lessonId);
 
     ((ListLessonModel)mController.getModel()).setResultListData(mDatabaseHelper.getAllLessons());
-
-
   }
 }

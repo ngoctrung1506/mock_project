@@ -20,7 +20,7 @@ import bu22.fga.mockproject_group2.entity.Lesson;
 import bu22.fga.mockproject_group2.screen.home.event.DragDropListenter;
 
 public class ListLessonAdapter extends BaseAdapter {
-    private List<Lesson> mDatasource;
+    private ArrayList<Lesson> mDatasource;
     private MainController mController;
     private boolean mIsEditable;
     private OnSendLessonNameBackToMainScreen mOnSendName;
@@ -36,8 +36,9 @@ public class ListLessonAdapter extends BaseAdapter {
         this.mController = mController;
     }
 
-    public void setEditable(boolean editable) {
-        mIsEditable = editable;
+
+    public void setListData(ArrayList<Lesson> mDatasource){
+        this.mDatasource = mDatasource;
         notifyDataSetChanged();
     }
 
@@ -55,6 +56,11 @@ public class ListLessonAdapter extends BaseAdapter {
     @Override
     public long getItemId(int i) {
         return i;
+    }
+
+    public void setEditable(boolean editable) {
+        mIsEditable = editable;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -114,7 +120,7 @@ public class ListLessonAdapter extends BaseAdapter {
         mController.sendMessage(msg);
     }
 
-    public void setListLesson(List<Lesson> lessons) {
+    public void setListLesson(ArrayList<Lesson> lessons) {
         this.mDatasource = lessons;
         notifyDataSetChanged();
     }

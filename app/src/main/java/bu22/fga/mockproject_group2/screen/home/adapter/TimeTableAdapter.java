@@ -13,11 +13,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import bu22.fga.mockproject_group2.MainActivity;
 import bu22.fga.mockproject_group2.R;
 import bu22.fga.mockproject_group2.constant.Constant;
 import bu22.fga.mockproject_group2.controller.MainController;
-import bu22.fga.mockproject_group2.dialog.ConfirmDialog;
 import bu22.fga.mockproject_group2.entity.DayWithRegistedLesson;
 import bu22.fga.mockproject_group2.entity.Lesson;
 import bu22.fga.mockproject_group2.screen.home.event.DragDropListenter;
@@ -29,17 +27,20 @@ public class TimeTableAdapter extends BaseAdapter {
     public static final String COLUMN_HEADER_PREFIX = "Day";
     public static final String ROW_HEADER_PREFIX = "Lesson";
     private MainController mController;
-    private ConfirmDialog.OnSendDataBackToMain mOnSendDataBackToMain;
 
-    public TimeTableAdapter(ArrayList<DayWithRegistedLesson> mDatasource, MainController mController, ConfirmDialog.OnSendDataBackToMain mOnSendDataBackToMain) {
+    public TimeTableAdapter(ArrayList<DayWithRegistedLesson> mDatasource, MainController mController) {
         this.mDatasource = mDatasource;
         this.mController = mController;
-        this.mOnSendDataBackToMain = mOnSendDataBackToMain;
+    }
+    public void setListData(ArrayList<DayWithRegistedLesson> mDatasource){
+        this.mDatasource = mDatasource;
+        notifyDataSetChanged();
     }
 
     public TimeTableAdapter(ArrayList<DayWithRegistedLesson> lessons) {
         this.mDatasource = lessons;
     }
+
 
     @Override
     public int getCount() {
@@ -91,7 +92,7 @@ public class TimeTableAdapter extends BaseAdapter {
                     return true;
                 }
             });
-            view.setOnDragListener(new DragDropListenter(mController,i, Constant.TYPE_TIME_TABLE, mOnSendDataBackToMain));
+            view.setOnDragListener(new DragDropListenter(mController,i, Constant.TYPE_TIME_TABLE));
         }
     }
 

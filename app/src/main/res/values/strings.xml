@@ -9,4 +9,6 @@
     <string name="text_sign_up_period">Đăng kí chu kì</string>
     <string name="text_from">From</string>
     <string name="text_to">To</string>
+    <string name="Add">Add</string>
+    <string name="enter_lesson_name">Lesson name</string>
 </resources>

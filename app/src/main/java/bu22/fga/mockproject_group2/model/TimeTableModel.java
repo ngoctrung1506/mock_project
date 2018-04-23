@@ -20,7 +20,7 @@ public class TimeTableModel
 
     private static TimeTableModel mModel = null;
     private ArrayList<DayWithRegistedLesson> mTimeTable;
-    private List<Lesson> mListLessonName;
+    private ArrayList<Lesson> mListLessonName;
 
     private int mCurentDrag =-1;
     private boolean mIsListLessonNameItem =false;
@@ -56,7 +56,7 @@ public class TimeTableModel
 
     public ArrayList<DayWithRegistedLesson> getTimeTable() {
         if (mTimeTable == null) {
-            mTimeTable = new ArrayList<DayWithRegistedLesson>();
+            mTimeTable = new ArrayList<>();
         }
         return mTimeTable;
     }
@@ -65,9 +65,9 @@ public class TimeTableModel
         this.finishedLoadData = finishedLoadData;
     }
 
-    public List<Lesson> getListLessonName() {
+    public ArrayList<Lesson> getListLessonName() {
         if (mListLessonName == null) {
-            mListLessonName = new ArrayList<Lesson>();
+            mListLessonName = new ArrayList<>();
         }
         return mListLessonName;
     }
@@ -79,7 +79,7 @@ public class TimeTableModel
         return mModel;
     }
 
-    public void setDataToLoad(ArrayList<DayWithRegistedLesson> listTimeTableData, List<Lesson> listLessonName, boolean finishedLoadData) {
+    public void setDataToLoad(ArrayList<DayWithRegistedLesson> listTimeTableData, ArrayList<Lesson> listLessonName, boolean finishedLoadData) {
         this.mTimeTable = listTimeTableData;
         this.mListLessonName = listLessonName;
         this.finishedLoadData = finishedLoadData;
@@ -94,7 +94,7 @@ public class TimeTableModel
 
     public void setDataForDeleteLesson(int curentDrag, Lesson lesson, String caseDelete) {
         if(caseDelete.equals("CaseListLesson")){
-            mListLessonName.set(curentDrag, lesson);
+            mListLessonName.set(curentDrag, new Lesson(""));
         }
         else if(caseDelete.equals("CaseTimeTable")){
             mTimeTable.set(curentDrag, new DayWithRegistedLesson(lesson));
@@ -102,7 +102,7 @@ public class TimeTableModel
         mPropertyChangeSupport.firePropertyChange(EVENT_LOAD_DATA, null, null);
     }
 
-    public void setmListLessonName(List<Lesson> mListLessonName) {
+    public void setmListLessonName(ArrayList<Lesson> mListLessonName) {
         this.mListLessonName = mListLessonName;
     }
 }

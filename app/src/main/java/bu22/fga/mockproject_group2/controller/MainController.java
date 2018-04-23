@@ -32,7 +32,7 @@ public class MainController {
         initStates();
     }
 
-    public Activity getView() {
+    public Activity  getView() {
         return mView;
     }
 
