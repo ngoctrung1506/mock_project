@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import bu22.fga.mockproject_group2.R;
 import bu22.fga.mockproject_group2.constant.Constant;
@@ -127,8 +126,5 @@ public class ConfirmDialog extends Dialog {
     }, year, month, dayOfMonth).show();
   }
 
-    public interface OnSendDataBackToMain {
-        void onSendBack(Date startDate, Date endDate);
-    }
 
 }

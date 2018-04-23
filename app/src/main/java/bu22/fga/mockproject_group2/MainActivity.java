@@ -21,7 +21,6 @@ import android.widget.Toast;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
-import java.util.List;
 
 import bu22.fga.mockproject_group2.constant.Constant;
 import bu22.fga.mockproject_group2.controller.MainController;
@@ -333,6 +332,8 @@ public class MainActivity extends AppCompatActivity implements OnSendLessonNameB
             }
         });
     }
+
+    /////git
 
     private void removeChange() {
 
