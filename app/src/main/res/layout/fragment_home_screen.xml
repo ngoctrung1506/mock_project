@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/main_btn_previous"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@mipmap/ic_back" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/main_btn_previous"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/main_txt_time_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="9-15/4/2018" />
+                </android.support.v7.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/main_btn_next"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@id/cv_period"
+                    android:src="@mipmap/ic_next" />
+
+                <ImageView
+                    android:id="@+id/main_img_recycle_bin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    app:srcCompat="@mipmap/ic_trash" />
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <GridView
+                android:id="@+id/main_grv_time_table"
+                android:layout_width="420dp"
+                android:layout_height="210dp"
+                android:layout_marginRight="10dp"
+
+                android:numColumns="7" />
+            <FrameLayout
+                android:layout_width="420dp"
+                android:id="@+id/main_fr_dim_view"
+                android:visibility="gone"
+                android:layout_height="210dp" android:background="#000" android:alpha="0.5"/>
+        </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="#7786f5"
+                        android:gravity="center"
+                        android:text="List lesson name"
+                        android:textColor="#fff"
+                        android:textSize="14dp" />
+
+                    <GridView
+                        android:id="@+id/main_grv_list_lesson"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="#747373"
+                        android:numColumns="3" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="#7786f5"
+                        android:id="@+id/main_btn_edit_lesson"
+                        android:text="@string/edit_lesson_name"
+                        android:textColor="#fff"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="5dp"
+                        android:weightSum="100">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="35"
+                            android:background="#7786f5"
+                            android:text="@string/ok"
+                            android:id="@+id/main_btn_ok"
+                            android:textColor="#fff"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="35"
+                            android:background="#7786f5"
+                            android:text="@string/cancel"
+                            android:id="@+id/main_btn_cancel"
+                            android:textColor="#fff"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

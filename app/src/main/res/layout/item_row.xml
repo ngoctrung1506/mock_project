@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/it_tv_lesson_name"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:textColor="#7786f5"
+        android:gravity="center"
+        android:layout_height="match_parent" />
+</LinearLayout>
