@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="@dimen/size_5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="bu22.fga.mockproject_group2.screen.editlesson.EditLessonActivity">
+
+    <TextView
+        android:padding="@dimen/size_2dp"
+        android:background="@drawable/bg_txt_old_name"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:id="@+id/edit_lesson_txt_old_name"
+        android:text="Chemistry"
+        android:textSize="@dimen/size_25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:id="@+id/edit_lesson_edt_new_name"
+        android:textSize="@dimen/size_25sp"
+        android:hint="@string/text_hint_for_edit_lesson"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/edit_lesson_view_base"
+        android:layout_centerInParent="true"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="@dimen/size_10dp"
+        android:textAllCaps="false"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_toLeftOf="@id/edit_lesson_view_base"
+        android:layout_below="@id/edit_lesson_edt_new_name"
+        android:text="@string/ok"
+        android:id="@+id/edit_lesson_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="@dimen/size_10dp"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@id/edit_lesson_view_base"
+        android:layout_below="@id/edit_lesson_edt_new_name"
+        android:text="@string/cancel"
+        android:id="@+id/edit_lesson_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MockProject2</string>
+    <string name="edit_lesson_name">Edit Lesson\'s Name</string>
+    <string name="cancel_edit">Cancel Edit</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_lesson_name">Add lesson</string>
+    <string name="text_hint_for_edit_lesson">Enter a new lesson name</string>
+    <string name="text_sign_up_period">Đăng kí chu kì</string>
+    <string name="text_from">From</string>
+    <string name="text_to">To</string>
+</resources>
